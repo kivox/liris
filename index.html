@@ -66,8 +66,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/index.css" />
-    <!-- Cloudflare Web Analytics: cookieless, privacy-first traffic insights -->
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CLOUDFLARE_WEB_ANALYTICS_TOKEN"}'></script>
+    <!-- Cloudflare Web Analytics: cookieless, privacy-first traffic insights (prod domain only) -->
+    <script>
+      if (location.hostname.endsWith('liris.world')) {
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+        s.setAttribute('data-cf-beacon', '{"token": "CLOUDFLARE_WEB_ANALYTICS_TOKEN"}');
+        document.head.appendChild(s);
+      }
+    </script>
 
     <!-- Schema.org Structured Data (JSON-LD) for liris.world -->
     <script type="application/ld+json">
