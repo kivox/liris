@@ -1,0 +1,6 @@
+{
+  "name": "LIRIS — Freedom For All | Drop 001 Atelier (Unified, 2D)",
+  "description": "Unified merge of the Google AI Studio Argon drop progression (Nov 2 21:59 → Nov 3 00:22). Latest 2D Svelte sanctuary + brand dossier as the base; merged in the 23:00 remix's esoteric particle parallax, veiled silhouette gallery, ambient soundscape, and private early-access drawer, plus the 2D macro textile plates. The 21:59 WebXR/3D iteration is excluded by request.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["release-sanctuary", "veiled-silhouette-gallery", "esoteric-particle-parallax", "ambient-soundscape", "obscure-horizon-clock", "macro-textile-plates", "brand-dossier", "early-access-api", "private-access-drawer", "cloudflare-worker-deploy"]
+}

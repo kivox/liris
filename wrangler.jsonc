@@ -1,0 +1,58 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "liris-world",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [
+    {
+      "pattern": "liris.world",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.liris.world",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "PUBLIC_SITE_URL": "https://liris.world",
+    "BRAND_NAME": "LIRIS",
+    "BRAND_TAGLINE": "FREEDOM FOR ALL",
+    "DROP_CODE": "001",
+    "FORWARD_TO": ""
+  },
+  "kv_namespaces": [
+    {
+      "binding": "LIRIS_CLEARANCE_KV",
+      "id": "liris-clearance-kv-prod",
+      "preview_id": "liris-clearance-kv-preview"
+    }
+  ],
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sql_file": "migrations/0001_init.sql"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "LIRIS_ARCHIVE_DB",
+      "database_name": "liris-archive-db",
+      "database_id": "liris-archive-d1-prod"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "LIRIS_LOOKBOOK_R2",
+      "bucket_name": "liris-lookbook-assets"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
