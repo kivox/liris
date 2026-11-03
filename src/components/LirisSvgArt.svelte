@@ -112,7 +112,6 @@
       </linearGradient>
     </defs>
     <polygon points="548,36 664,36 172,424 56,424" fill="url(#liris-gold-slash)" opacity="0.95" />
-    <polygon points="606,14 617,27 606,40 595,27" fill="#E2CFA8" />
 
     <!-- Luxury Didone wordmark on top of the slash -->
     <text
@@ -150,7 +149,6 @@
     </g>
 
     <!-- Drop tag: top-left clear zone (top-right is covered by the gold slash) -->
-    <polygon points="52,40 60,48 52,56 44,48" fill="#E2CFA8" />
     <text
       x="72"
       y="58"
