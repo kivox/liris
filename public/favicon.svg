@@ -1,0 +1,64 @@
+<svg
+    viewBox="0 0 120 120"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+    role="img"
+    aria-label="LIRIS Veiled Couture Negative-Space Silhouette Mark"
+  >
+    <!-- Outer architectural construction frame & golden-ratio hairlines -->
+    <polygon
+      points="60,4 104,22 116,60 98,106 60,116 22,106 4,60 16,22"
+      stroke="#E2CFA8"
+      stroke-width="1"
+      opacity="0.28"
+    />
+    <line x1="60" y1="0" x2="60" y2="120" stroke="#E2CFA8" stroke-width="0.6" opacity="0.25" />
+    <line x1="0" y1="60" x2="120" y2="60" stroke="#E2CFA8" stroke-width="0.6" opacity="0.25" />
+
+    <!--
+      Compound fill-rule="evenodd" path:
+      Outer polygon = sharp monolithic couture cape/hooded silhouette.
+      Inner negative-space cutouts = veiled face/cowl void, central spinal slit, and pleated geometric drape channels.
+    -->
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="
+        M 60 10
+        L 94 28
+        L 84 106
+        L 36 106
+        L 26 28
+        Z
+
+        M 60 22
+        L 73 36
+        L 60 56
+        L 47 36
+        Z
+
+        M 57.5 60
+        L 62.5 60
+        L 64 102
+        L 56 102
+        Z
+
+        M 36 35
+        L 45 42
+        L 48 98
+        L 41 98
+        Z
+
+        M 84 35
+        L 75 42
+        L 72 98
+        L 79 98
+        Z
+      "
+      fill="#E2CFA8"
+    />
+
+    <!-- Sharp floating gold diamond suspended inside the negative-space cowl aperture -->
+    <polygon points="60,32 64,38 60,44 56,38" fill="#E2CFA8" />
+  </svg>
