@@ -62,3 +62,10 @@ npx wrangler deploy               # workers.dev URL printed
 - favicon.svg, og-image.png, manifest, sitemap → 200
 - Worker version bf1439ed-8242-4dcd-82c9-b64e2359e06c, account Xenode LTD 558fc9b9…, zone 9260bf23…
 - ⏳ only remaining: Email Routing enable + catch-all rule → needs **Zone → Email Routing → Edit** on the API token (current token got 10000/10405). Add it at dash.cloudflare.com/profile/api-tokens, then re-run the two calls in DEPLOY.md §3.
+
+## Email — final state (2026-11-03)
+Email Routing is NOT available on this account/plan, so inbound `@liris.world` mail is not routed.
+Email collection instead runs through the site itself, verified live:
+`POST /api/early-access` → KV `clearance:<email>` + D1 `clearances` (verified row: live@liris.world / LRS-WRLD-LIV-9349 / utm_source=deploy).
+The worker's `email` handler stays in code: if Email Routing is ever enabled, a catch-all rule → worker `liris-world` will store inbound mail into D1 `emails` (+ forward via `FORWARD_TO`).
+Outbound transactional mail (optional): `email_sending:write` scope + Send Email binding, or any SMTP/API provider.
