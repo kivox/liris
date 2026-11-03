@@ -149,12 +149,12 @@
       </text>
     </g>
 
-    <!-- Drop tag: visible, top-right, with diamond marker -->
-    <polygon points="560,40 568,48 560,56 552,48" fill="#E2CFA8" />
+    <!-- Drop tag: top-left clear zone (top-right is covered by the gold slash) -->
+    <polygon points="52,40 60,48 52,56 44,48" fill="#E2CFA8" />
     <text
-      x="652"
+      x="72"
       y="58"
-      text-anchor="end"
+      text-anchor="start"
       font-family="'JetBrains Mono', monospace"
       font-size="27"
       font-weight="500"
