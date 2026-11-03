@@ -45,3 +45,12 @@ npx wrangler deploy               # workers.dev URL printed
 - sitemap.xml + robots.txt are in `public/` and deploy with the assets.
 - JSON-LD Organization/Brand/WebSite/Event, OG + Twitter cards in `index.html`.
 - Verify: `curl -I https://liris.world/`, Lighthouse, `https://securityheaders.com`.
+
+## ✅ Executed 2026-11-03 (this session)
+- Zone `liris.world` found on account **Xenode LTD** (`558fc9b9a8a73584c8f9a74d225cfcb2`, zone `9260bf234a5b987f2154b05f443c4ef1`)
+- KV `liris-clearance-kv-prod` = `1f594d99ae394df8854d10b0b65be7a9`; D1 `liris-archive-db` = `4dc72c97-a665-4eee-9cb0-82f854c45355` (migrations applied ✅); R2 `liris-lookbook-assets` ✅ — all patched into `wrangler.jsonc` with `account_id`
+- `wrangler deploy` ✅ — version `bf1439ed-8242-4dcd-82c9-b64e2359e06c`, custom domains **liris.world + www.liris.world attached**
+- Remaining (need DNS:Edit / Email Routing:Edit — the OAuth token is zone:read-only):
+  1. DNS: A `liris.world` → `192.0.2.1` proxied; A `www.liris.world` → `192.0.2.1` proxied (dashboard → DNS → Add record)
+  2. Email Routing: enable, catch-all rule → action "Send to a Worker" → `liris-world` (or forward to an inbox via `FORWARD_TO` var)
+  3. Web Analytics token into `index.html` beacon placeholder

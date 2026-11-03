@@ -1,4 +1,5 @@
 {
+  "account_id": "558fc9b9a8a73584c8f9a74d225cfcb2",
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "liris-world",
   "main": "src/worker/index.ts",
@@ -29,7 +30,7 @@
   "kv_namespaces": [
     {
       "binding": "LIRIS_CLEARANCE_KV",
-      "id": "liris-clearance-kv-prod",
+      "id": "1f594d99ae394df8854d10b0b65be7a9",
       "preview_id": "liris-clearance-kv-preview"
     }
   ],
@@ -43,7 +44,7 @@
     {
       "binding": "LIRIS_ARCHIVE_DB",
       "database_name": "liris-archive-db",
-      "database_id": "liris-archive-d1-prod"
+      "database_id": "4dc72c97-a665-4eee-9cb0-82f854c45355"
     }
   ],
   "r2_buckets": [
