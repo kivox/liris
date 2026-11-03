@@ -54,3 +54,11 @@ npx wrangler deploy               # workers.dev URL printed
   1. DNS: A `liris.world` → `192.0.2.1` proxied; A `www.liris.world` → `192.0.2.1` proxied (dashboard → DNS → Add record)
   2. Email Routing: enable, catch-all rule → action "Send to a Worker" → `liris-world` (or forward to an inbox via `FORWARD_TO` var)
   3. Web Analytics token into `index.html` beacon placeholder
+
+## ✅✅ LIVE 2026-11-03 02:22 UTC — https://liris.world is serving
+- DNS resolves (Workers-managed proxied records auto-created on custom-domain attach; edge IP via DoH)
+- `GET /` → 200 from CF edge (cf-ray LHR), security headers present (CSP, X-Frame-Options: DENY, nosniff, referrer-policy, permissions-policy)
+- `GET /api/health` → ok:true · `POST /api/early-access` → confirmation persisted to D1 (`clearances` row verified: live@liris.world / LRS-WRLD-LIV-9349 / utm_source=deploy) + KV
+- favicon.svg, og-image.png, manifest, sitemap → 200
+- Worker version bf1439ed-8242-4dcd-82c9-b64e2359e06c, account Xenode LTD 558fc9b9…, zone 9260bf23…
+- ⏳ only remaining: Email Routing enable + catch-all rule → needs **Zone → Email Routing → Edit** on the API token (current token got 10000/10405). Add it at dash.cloudflare.com/profile/api-tokens, then re-run the two calls in DEPLOY.md §3.
